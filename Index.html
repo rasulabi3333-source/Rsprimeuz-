@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RSL PRIME UZ — Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,8,8,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+}
+
+.nav-inner {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 8px 18px;
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(45px, 9vw, 90px);
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.gradient {
+    background: linear-gradient(90deg,#8b5cf6,#ec4899,#06b6d4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: #aaa;
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.btn-main {
+    background: #fff;
+    color: #000;
+}
+
+.btn-dark {
+    border: 1px solid #333;
+    color: #fff;
+}
+
+/* SECTION */
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+/* SERVICES */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.work {
+    height: 280px;
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top right,#8b5cf6,transparent 35%),
+        linear-gradient(135deg,#171717,#080808);
+    border: 1px solid #292929;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.work h3 {
+    font-size: 24px;
+}
+
+.work p {
+    color: #999;
+}
+
+/* ABOUT */
+
+.about {
+    background: #0d0d0d;
+}
+
+.about-box {
+    max-width: 750px;
+}
+
+.about p {
+    color: #aaa;
+    font-size: 17px;
+}
+
+/* PRICES */
+
+.price {
+    border: 1px solid #292929;
+    background: #111;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.price h3 {
+    font-size: 22px;
+}
+
+.price-number {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.price ul {
+    list-style: none;
+    color: #aaa;
+}
+
+.price li {
+    margin: 8px 0;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #999;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px 0;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width: 750px) {
+
+    nav a {
+        display: none;
+    }
+
+    .cards,
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav-inner">
+
+<div class="logo">
+RSL <span>PRIME</span> UZ
+</div>
+
+<div>
+<a href="#xizmatlar">Xizmatlar</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#narxlar">Narxlar</a>
+<a href="#aloqa">Aloqa</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+<div class="container hero-content">
+
+<div class="badge">
+AI CREATIVE STUDIO
+</div>
+
+<h1>
+RSL <span class="gradient">PRIME UZ</span>
+</h1>
+
+<p>
+AI yordamida musiqa, video, cover va zamonaviy
+media kontent yaratamiz.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-main" href="#aloqa">
+Buyurtma berish
+</a>
+
+<a class="btn btn-dark" href="#portfolio">
+Portfolio
+</a>
+
+</div>
+
+</div>
+</header>
+
+
+<!-- SERVICES -->
+
+<section id="xizmatlar">
+<div class="container">
+
+<h2 class="section-title">Xizmatlar</h2>
+
+<p class="section-subtitle">
+Sizning g‘oyangizni zamonaviy kontentga aylantiramiz.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🎵</div>
+<h3>AI Musiqa</h3>
+<p>
+Original qo‘shiq, beat, rap va melodik musiqa yaratish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎬</div>
+<h3>AI Video</h3>
+<p>
+Instagram, YouTube va reklama uchun cinematic AI videolar.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🖼️</div>
+<h3>Cover Design</h3>
+<p>
+Qo‘shiq coverlari, posterlar va social media dizaynlar.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Social Media</h3>
+<p>
+Instagram Reels va YouTube Shorts uchun kreativ kontent.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✨</div>
+<h3>Branding</h3>
+<p>
+Logo, banner va brend uchun vizual uslub.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Promo</h3>
+<p>
+Mahsulot, qo‘shiq yoki shaxsiy brend uchun promo.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+<div class="container">
+
+<h2 class="section-title">Portfolio</h2>
+
+<p class="section-subtitle">
+Biz yaratadigan ishlar.
+</p>
+
+<div class="portfolio">
+
+<div class="work">
+<h3>Music Project</h3>
+<p>AI musiqa & cinematic sound</p>
+</div>
+
+<div class="work">
+<h3>AI Video</h3>
+<p>Instagram / YouTube promo</p>
+</div>
+
+<div class="work">
+<h3>Cover Art</h3>
+<p>Music cover design</p>
+</div>
+
+<div class="work">
+<h3>Brand Design</h3>
+<p>Logo & social media</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+<div class="container">
+
+<div class="about-box">
+
+<h2 class="section-title">
+RSL PRIME UZ haqida
+</h2>
+
+<p>
+RSL PRIME UZ — zamonaviy AI texnologiyalari yordamida
+musiqa, video va kreativ media kontent yaratishga
+yo‘naltirilgan ijodiy loyiha.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- PRICES -->
+
+<section id="narxlar">
+<div class="container">
+
+<h2 class="section-title">Xizmatlar narxi</h2>
+
+<p class="section-subtitle">
+Boshlang‘ich paketlar.
+</p>
+
+<div class="cards">
+
+<div class="price">
+<h3>Music</h3>
+<div class="price-number">50 000 so‘m</div>
+
+<ul>
+<li>✓ AI qo‘shiq</li>
+<li>✓ Beat</li>
+<li>✓ Vokal</li>
+</ul>
+</div>
+
+
+<div class="price">
+<h3>Promo Video</h3>
+<div class="price-number">100 000 so‘m</div>
+
+<ul>
+<li>✓ 15 soniyagacha video</li>
+<li>✓ AI cinematic style</li>
+<li>✓ Social media format</li>
+</ul>
+</div>
+
+
+<div class="price">
+<h3>Premium</h3>
+<div class="price-number">200 000 so‘m</div>
+
+<ul>
+<li>✓ Music</li>
+<li>✓ Cover</li>
+<li>✓ Promo video</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="aloqa" class="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Buyurtma berish
+</h2>
+
+<p>
+Loyihangizni boshlash uchun biz bilan bog‘laning.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-main"
+href="https://instagram.com/rslprimeuz"
+target="_blank">
+Instagram
+</a>
+
+<a class="btn btn-dark"
+href="https://youtube.com/"
+target="_blank">
+YouTube
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+© 2026 RSL PRIME UZ — AI Creative Studio
+</div>
+
+</footer>
+
+</body>
+</html>
